@@ -1,0 +1,234 @@
+
+/*---------------CARRER-----------------*/
+
+@keyframes rotation {
+    from {
+        background: green;
+        transform: rotate(0deg);
+    }
+    to {
+        background: purple;
+        transform: rotate(720deg);
+    }
+}
+#carre{
+    margin-left: 120px;
+}
+#a{
+    
+    width : 200px;
+    height : 200px;
+    background : orange;
+    border : solid black 1px;
+    animation : rotation 3s infinite linear alternate;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+/*--------------Balle------------------*/
+
+@keyframes bounce {
+  0% {transform: translateY(0px);}
+  10%{transform: translateY(190px);}
+  20%{transform: translateY(45px);}
+  30%{transform: translateY(190px);}
+  40%{transform: translateY(90px);}
+  50%{transform: translateY(190px);}
+  60%{transform: translateY(135px);}
+  70%{transform: translateY(190px);}
+  80%{transform: translateY(180px);}
+  90%{transform: translateY(190px);}
+  100%{transform: translateY(0%);}
+}
+#balle{
+    margin-left: 500px;
+    margin-top: -280px;
+        
+}
+#b{
+    width : 100px;
+    height: 290px;
+    background-color: blueviolet;
+    border : 1px black solid;
+    padding : 1px;
+    margin-left: 490px;
+}
+#b1{
+
+    border-radius : 100%;
+    width : 100px;
+    height : 100px;
+    background : black;
+    animation : bounce 2.5s linear infinite ;
+    margin-left: 490px;
+    margin-top: -290px;
+}
+
+
+/*-------------LOADER----------------------*/
+#load{
+    margin-left: 920px;
+}
+.c{
+    display: flex;
+    position : absolute;
+    border : 1px black solid;
+    border-radius : 100%;
+    width : 60px;
+    height : 60px;
+    margin-left: 80px;
+    
+    
+}
+#c1{
+    animation : loading 3s linear alternate infinite;
+    margin-left: 850px;
+    
+}
+#c2{
+  animation : loading 3s linear alternate infinite;
+  margin-left: 930px;
+  animation-delay: 1s;
+}
+#c3{
+animation : loading 3s linear alternate infinite;
+margin-left: 1010px;
+animation-delay: 2s;
+
+}
+@keyframes loading{
+    0%{background : yellow}
+    50%{background :yellowgreen}
+    100%{background : darkgreen}
+}
+/*---------------La chenille---------------------*/
+.che{
+    margin-left: 90px;
+    margin-top: 350px;
+}
+#container{
+    width : 300px;
+    height : 300px;
+    background : burlywood;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.d{
+    position : absolute;
+    border : 1px black solid;
+    background : purple;
+    border-radius: 20%;
+    width : 50px;
+    height : 50px;
+
+  
+}
+@keyframes rotate{
+    0%{rotate: 0deg;}
+    50%{rotate: 360deg;}
+    100%{rotate: 720deg;}
+}
+@keyframes etoile{
+  0% {transform: translateX(0px);}
+  25%{transform: translate3d(250px,0px,0px);}
+  50%{transform: translate3d(250px,250px,0);}
+  75%{transform: translate3d(0px,250px,0px);}
+  100%{transform: translateX(0px);}
+}
+#d1{
+    animation : etoile, 12s infinite ;
+  
+}
+#d2{
+  animation : etoile 12s infinite linear;
+  animation-delay: 2s;
+}
+#d3{  
+  animation : etoile 12s infinite ;
+  animation-delay: 4s;
+}
+#d4{ 
+  animation : etoile 12s infinite linear;
+  animation-delay: 6s;
+}
+#d5{  
+  animation : etoile 12s infinite ;
+  animation-delay: 8s;
+}
+#d6{  
+  animation : etoile 12s infinite linear ;
+  animation-delay: 10s;
+}
+
+/*-----------------CAROUCELLE------------------*/
+.car{
+    margin-left: 650px;
+    margin-top: -360px;
+}
+#container1{
+  width : 300px;
+  height : 300px;
+  background : rgb(178, 177, 177);
+  margin-left: 600px;
+  margin-top: 30px;
+  
+}
+.e{ 
+  position : absolute;
+  border : 1px black solid;
+  background : rgb(73, 198, 35);
+  border-radius : 30%;
+  width : 20px;
+  height : 20px;
+  animation : carousel 8s infinite linear;}
+
+#e1{
+  animation-delay : 1s; 
+}  
+
+#e2{
+  animation-delay : 2s; 
+}
+#e3{
+  animation-delay : 3s; 
+}
+#e4{
+  animation-delay : 4s; 
+}
+#e5{
+  animation-delay : 5s; 
+}
+#e6{
+  animation-delay : 6s; 
+}
+#e7{
+  animation-delay : 7s; 
+}
+#e8{
+  animation-delay : 8s; 
+}
+
+@keyframes carousel{
+  0%{transform : translateX(0px) translateZ(0px) rotateY(90deg) ;}
+
+  12.5%{transform : translateX(40px) translateZ(40px) rotateY(135deg);}
+
+  25%{transform : translateX(80px) translateZ(80px) rotateY(180deg);}
+
+  32.5%{transform : translateX(120px) translateZ(40px) rotateY(225deg);}
+
+  50%{transform : translateX(180px) translateZ(0px) rotateY(270deg);}
+
+  67.5%{transform : translateX(120px) translateZ(-40px) rotateY(315deg) ;}
+
+  75%{transform : translateX(80px) translateZ(-80px) rotateY(360deg) ;}
+
+  87.5%{transform : translateX(40px) translateZ(-40px) rotateY(405deg);}
+
+  100%{transform : translateX(0px) translateZ(0px) rotateY(450deg);}
+  }
+  @keyframes tour{
+    0%{transform : rotateY(0deg) }
+    50%{transform : rotateY(180deg)}
+    100%{transform : rotateY(360deg)} 
+  } 
