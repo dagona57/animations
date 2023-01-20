@@ -1,3 +1,41 @@
+body{
+  display: flex;
+}
+main{
+  width: 90%;
+}
+ /*-------------MENU---------------*/
+ @keyframes menus{
+  0% {
+    top: 10px;
+    }
+  25%{
+    top: 225px;
+  }
+  50%{
+    top: 450px;
+  }
+  75%{
+    top: 675px;
+  }
+  100%{
+    top: 900px;
+  }
+}
+aside{
+  transition-duration: 3s;
+  background-color: black;
+  height: 90px;
+  width: 10%;
+  color: #efefef;
+  text-align: center;
+  border-radius: 30px;
+}
+aside:hover{
+  height: 2600px;
+  animation: menus ;
+  
+}
 
 /*---------------CARRER-----------------*/
 
@@ -12,7 +50,14 @@
     }
 }
 #carre{
-    margin-left: 120px;
+  margin: 0 0 30px 0;
+  padding: 20px;
+  background-color: rgba(20,20,20,0.9);
+  color: rgb(243, 6, 6);
+  text-align: center;
+  font-family: Arial;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px -1px #efefef;
 }
 #a{
     
@@ -21,7 +66,7 @@
     background : orange;
     border : solid black 1px;
     animation : rotation 3s infinite linear alternate;
-    margin-left: 40px;
+    margin-left: 640px;
     margin-top: 50px;
 }
 
@@ -41,8 +86,14 @@
   100%{transform: translateY(0%);}
 }
 #balle{
-    margin-left: 500px;
-    margin-top: -280px;
+  margin: 100px 0 30px 0;
+  padding: 20px;
+  background-color: rgba(20,20,20,0.9);
+  color: rgb(238, 21, 202);
+  text-align: center;
+  font-family: Arial;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px -1px #efefef;
         
 }
 #b{
@@ -51,7 +102,7 @@
     background-color: blueviolet;
     border : 1px black solid;
     padding : 1px;
-    margin-left: 490px;
+    margin-left: 690px;
 }
 #b1{
 
@@ -60,19 +111,26 @@
     height : 100px;
     background : black;
     animation : bounce 2.5s linear infinite ;
-    margin-left: 490px;
+    margin-left: 690px;
     margin-top: -290px;
 }
 
 
 /*-------------LOADER----------------------*/
 #load{
-    margin-left: 920px;
+  margin: 250px 0 30px 0;
+  padding: 20px;
+  background-color: rgba(20,20,20,0.9);
+  color: rgb(13, 240, 43);
+  text-align: center;
+  font-family: Arial;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px -1px #efefef;
 }
 .c{
     display: flex;
     position : absolute;
-    border : 1px black solid;
+    border : 1px solid black;
     border-radius : 100%;
     width : 60px;
     height : 60px;
@@ -82,17 +140,18 @@
 }
 #c1{
     animation : loading 3s linear alternate infinite;
-    margin-left: 850px;
-    
+    margin-left: 660px;    
 }
+
 #c2{
   animation : loading 3s linear alternate infinite;
-  margin-left: 930px;
+  margin-left: 730px;
   animation-delay: 1s;
 }
+
 #c3{
 animation : loading 3s linear alternate infinite;
-margin-left: 1010px;
+margin-left: 800px;
 animation-delay: 2s;
 
 }
@@ -101,18 +160,32 @@ animation-delay: 2s;
     50%{background :yellowgreen}
     100%{background : darkgreen}
 }
+
 /*---------------La chenille---------------------*/
-.che{
-    margin-left: 90px;
-    margin-top: 350px;
-}
+
 #container{
-    width : 300px;
-    height : 300px;
-    background : burlywood;
-    margin-top: 30px;
-    margin-left: 30px;
+  position: relative;
+  width : 320px;
+  height : 320px;
+  background : burlywood;
+  margin-top: 30px;
+  margin-left: 600px;
+  
 }
+#fille{
+  position: absolute;
+}
+.che{
+  margin: 300px 0 30px 0;
+  padding: 20px;
+  background-color: rgba(20,20,20,0.9);
+  color: rgb(59, 11, 233);
+  text-align: center;
+  font-family: Arial;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px -1px #efefef;
+}
+
 .d{
     position : absolute;
     border : 1px black solid;
@@ -123,112 +196,185 @@ animation-delay: 2s;
 
   
 }
-@keyframes rotate{
-    0%{rotate: 0deg;}
-    50%{rotate: 360deg;}
-    100%{rotate: 720deg;}
-}
+
 @keyframes etoile{
-  0% {transform: translateX(0px);}
-  25%{transform: translate3d(250px,0px,0px);}
-  50%{transform: translate3d(250px,250px,0);}
-  75%{transform: translate3d(0px,250px,0px);}
-  100%{transform: translateX(0px);}
+    0% {
+      top: 10px;
+      transform: rotate(0deg);
+      }
+    20%{
+      top: 250px;
+      background-color: blue;
+    }
+    21%{
+      left: 10px;
+    }
+    50%{
+      left: 250px;
+      background-color: black;
+    }
+    51%{
+      top: 250px;
+    }
+    70%{
+      top: 10px;
+    }
+    71%{
+      left: 250px;
+      transform: rotate(1440deg);
+    }
+    100%{
+      left: 10px;
+      transform: rotate(0deg);
+    }
+
 }
+
 #d1{
-    animation : etoile, 12s infinite ;
-  
+    animation : etoile 12s infinite; 
 }
+
 #d2{
   animation : etoile 12s infinite linear;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
+
 #d3{  
   animation : etoile 12s infinite ;
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
+
 #d4{ 
   animation : etoile 12s infinite linear;
-  animation-delay: 6s;
+  animation-delay: 5s;
 }
+
 #d5{  
   animation : etoile 12s infinite ;
-  animation-delay: 8s;
+  animation-delay: 7s;
 }
+
 #d6{  
   animation : etoile 12s infinite linear ;
-  animation-delay: 10s;
+  animation-delay: 9s;
 }
 
 /*-----------------CAROUCELLE------------------*/
-.car{
-    margin-left: 650px;
-    margin-top: -360px;
+
+.car{/*titre*/
+  margin: 50px 0 30px 0;
+  padding: 20px;
+  background-color: rgba(20,20,20,0.9);
+  color: #fff;
+  text-align: center;
+  font-family: Arial;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px -1px #efefef;
 }
-#container1{
-  width : 300px;
-  height : 300px;
-  background : rgb(178, 177, 177);
-  margin-left: 600px;
-  margin-top: 30px;
+.carousel_wrapper{/*encadrement*/
+  position: relative;
+  width: 1320px;
+  height: 800px;
+  background-color: blanchedalmond;
+  margin: 5px auto 0 auto; 
   
 }
-.e{ 
-  position : absolute;
+#carousel{ /*Parents*/ 
+  position: absolute;
+  width:60%;
+  height:60%;
+  left: 250px;
+  right: 900px;
+  bottom: 20px;
+  top: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 4S linear infinite;
+}
+.side{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  
+}
+#glob1{
+  transform: rotate(45deg);
+}
+#glob2{
+  transform: rotate(90deg);
+}
+#glob3{
+  transform: rotate(135deg);
+}
+#glob4{
+  transform: rotate(180deg);
+}
+
+
+ @keyframes rotate{
+    from{
+      transform: rotate3d(0deg);
+    }
+  to{
+      transform: rotate3d(1,1,1, 360deg);
+  }   
+
+  
+}
+@keyframes position {
+  0%{
+    top: -100px;
+  }
+  10%{ 
+    right: 130px;
+  }
+}
+
+.e1{ 
   border : 1px black solid;
   background : rgb(73, 198, 35);
-  border-radius : 30%;
-  width : 20px;
-  height : 20px;
-  animation : carousel 8s infinite linear;}
-
-#e1{
-  animation-delay : 1s; 
-}  
-
-#e2{
-  animation-delay : 2s; 
+  width : 30px;
+  height : 30px;
 }
-#e3{
-  animation-delay : 3s; 
+.e2{
+  border : 1px black solid;
+  background : rgb(198, 122, 35);  
+  width : 30px;
+  height : 30px;  
 }
-#e4{
-  animation-delay : 4s; 
+.e3{
+  border : 1px black solid;
+  background : rgb(35, 46, 198);  
+  width : 30px;
+  height : 30px;
 }
-#e5{
-  animation-delay : 5s; 
+.e4{
+  border : 1px black solid;
+  background : rgb(224, 228, 22);  
+  width : 30px;
+  height : 30px; 
 }
-#e6{
-  animation-delay : 6s; 
+.e5{
+  border : 1px black solid;
+  background : rgb(197, 27, 21);  
+  width : 30px;
+  height : 30px; 
 }
-#e7{
-  animation-delay : 7s; 
+.e6{
+  border : 1px black solid;
+  background : rgb(35, 152, 198);  
+  width : 30px;
+  height : 30px; 
 }
-#e8{
-  animation-delay : 8s; 
+.e7{
+  border : 1px black solid;
+  background : rgb(35, 198, 122);  
+  width : 30px;
+  height : 30px;
 }
-
-@keyframes carousel{
-  0%{transform : translateX(0px) translateZ(0px) rotateY(90deg) ;}
-
-  12.5%{transform : translateX(40px) translateZ(40px) rotateY(135deg);}
-
-  25%{transform : translateX(80px) translateZ(80px) rotateY(180deg);}
-
-  32.5%{transform : translateX(120px) translateZ(40px) rotateY(225deg);}
-
-  50%{transform : translateX(180px) translateZ(0px) rotateY(270deg);}
-
-  67.5%{transform : translateX(120px) translateZ(-40px) rotateY(315deg) ;}
-
-  75%{transform : translateX(80px) translateZ(-80px) rotateY(360deg) ;}
-
-  87.5%{transform : translateX(40px) translateZ(-40px) rotateY(405deg);}
-
-  100%{transform : translateX(0px) translateZ(0px) rotateY(450deg);}
-  }
-  @keyframes tour{
-    0%{transform : rotateY(0deg) }
-    50%{transform : rotateY(180deg)}
-    100%{transform : rotateY(360deg)} 
-  } 
+.e8{
+  border : 1px black solid;
+  background : rgb(17, 20, 204);  
+  width : 30px;
+  height : 30px;
+}
